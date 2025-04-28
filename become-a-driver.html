@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Driver - Optimum Rides</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .btn-glow {
+      animation: glow 1.5s ease-in-out infinite alternate;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #007bff; /* Updated to match index.html color scheme */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Updated to match index.html color scheme */
+    }
+
+    .btn-glow:hover {
+      background-color: #0056b3; /* Updated to match index.html color scheme */
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Updated to match index.html color scheme */
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.7); /* Updated to match index.html color scheme */
+      }
+
+      100% {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 1); /* Updated to match index.html color scheme */
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .testimonial-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .testimonial-item {
+      position: absolute;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    .testimonial-item.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .testimonial-item.outgoing {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    .testimonial img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .testimonial p {
+      font-size: 16px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial .testimonial-content {
+      margin-left: 10px;
+    }
+
+    .input-section {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    .input-section.active {
+      display: block;
+    }
+
+    #applicationForm {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
+      <a href="index.html" class="text-xl font-bold">Optimum Rides</a>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-gray-400">Home</a>
+        <a href="book-a-ride.html" class="hover:text-gray-400">Book a Ride</a>
+        <a href="about-us.html" class="hover:text-gray-400">About Us</a>
+        <a href="become-a-driver.html" class="text-yellow-400 hover:text-yellow-300">Become a Driver</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white text-center py-20">
+    <h1 class="text-4xl font-bold mb-4">Drive with Optimum Rides</h1>
+    <p class="text-lg mb-6">Join our team and enjoy flexible hours and great earnings!</p>
+    <button class="btn-glow" id="applyBtn">Apply with Us</button>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="container mx-auto py-16">
+    <h2 class="text-3xl font-semibold text-center mb-12">Why Drive With Us?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="benefits-tile p-6 bg-white rounded-lg shadow-lg hover:shadow-xl fade-in-up">
+        <h3 class="text-xl font-semibold mb-4">Flexible Hours</h3>
+        <p>Work when you want, and set your own schedule for maximum flexibility.</p>
+      </div>
+      <div class="benefits-tile p-6 bg-white rounded-lg shadow-lg hover:shadow-xl fade-in-up">
+        <h3 class="text-xl font-semibold mb-4">Great Earnings</h3>
+        <p>Earn more with competitive pay and generous bonuses for dedicated drivers.</p>
+      </div>
+      <div class="benefits-tile p-6 bg-white rounded-lg shadow-lg hover:shadow-xl fade-in-up">
+        <h3 class="text-xl font-semibold mb-4">Support</h3>
+        <p>24/7 support to help you when you need it most. We've got your back!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Driver Testimonials Section -->
+  <section class="testimonial bg-gray-100 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-8">What Our Drivers Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-item active">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"I love driving for Optimum Rides! The hours are flexible, and the pay is great!"</p>
+          <p>- John D.</p>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"Optimum Rides has been a game changer for me. The support is amazing."</p>
+          <p>- David S.</p>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"Great company to work for. I appreciate the flexibility and rewards."</p>
+          <p>- Michael B.</p>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"I’ve been driving for Optimum Rides for over a year, and it’s been the best decision I’ve made."</p>
+          <p>- James W.</p>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"The team here is always ready to help, and I enjoy the bonuses they offer."</p>
+          <p>- Chris L.</p>
+        </div>
+      </div>
+      <div class="testimonial-item">
+        <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Driver Photo">
+        <div class="testimonial-text">
+          <p>"I’m glad I joined Optimum Rides. It’s a fantastic opportunity for anyone looking for flexible work."</p>
+          <p>- Peter T.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Button Below Testimonials -->
+  <section class="text-center py-8">
+    <button class="btn-glow" id="applyBtnBelow">Apply with Us</button>
+  </section>
+
+  <!-- Driver Application Form -->
+  <section class="container mx-auto py-16">
+    <h2 class="text-3xl font-semibold text-center mb-12">Driver Application</h2>
+    <div id="applicationForm">
+      <form id="driverForm">
+        <!-- Section 1 -->
+        <div class="input-section active" id="section1">
+          <label for="firstName" class="block text-lg">First Name</label>
+          <input type="text" id="firstName" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="lastName" class="block text-lg">Last Name</label>
+          <input type="text" id="lastName" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="email" class="block text-lg">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="phone" class="block text-lg">Phone Number</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <button type="button" class="btn-glow" id="nextBtn1">Next</button>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="input-section" id="section2">
+          <label for="driverLicense" class="block text-lg">Driver's License Number</label>
+          <input type="text" id="driverLicense" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="driverLicensePhoto" class="block text-lg">Upload Photo of Driver's License (Front)</label>
+          <input type="file" id="driverLicensePhoto" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="driverLicensePhotoBack" class="block text-lg">Upload Photo of Driver's License (Back)</label>
+          <input type="file" id="driverLicensePhotoBack" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <button type="button" class="btn-glow" id="nextBtn2">Next</button>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="input-section" id="section3">
+          <label for="vehicleInfo" class="block text-lg">Vehicle Information</label>
+          <input type="text" id="vehicleInfo" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="insuranceInfo" class="block text-lg">Insurance Policy Number</label>
+          <input type="text" id="insuranceInfo" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="insurancePhoto" class="block text-lg">Upload Photo of Insurance Card</label>
+          <input type="file" id="insurancePhoto" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <button type="button" class="btn-glow" id="nextBtn3">Next</button>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="input-section" id="section4">
+          <label for="ssn" class="block text-lg">Social Security Number</label>
+          <input type="text" id="ssn" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <label for="ssnPhoto" class="block text-lg">Upload Photo of SSN Card</label>
+          <input type="file" id="ssnPhoto" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+          <button type="submit" class="btn-glow">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-item');
+
+    setInterval(() => {
+      testimonials[currentTestimonial].classList.remove('active');
+      testimonials[currentTestimonial].classList.add('outgoing');
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      testimonials[currentTestimonial].classList.add('active');
+      testimonials[currentTestimonial].classList.remove('outgoing');
+    }, 5000);
+  </script>
+
+  <script>
+    const applyBtn = document.getElementById('applyBtn');
+    const applyBtnBelow = document.getElementById('applyBtnBelow');
+    const applicationForm = document.getElementById('applicationForm');
+    const inputSections = document.querySelectorAll('.input-section');
+    let currentSection = 0;
+
+    applyBtn.addEventListener('click', () => {
+      applicationForm.style.display = 'block';
+      inputSections[currentSection].classList.add('active');
+    });
+
+    applyBtnBelow.addEventListener('click', () => {
+      applicationForm.style.display = 'block';
+      inputSections[currentSection].classList.add('active');
+    });
+
+    document.querySelectorAll('.btn-glow').forEach(button => {
+      button.addEventListener('click', () => {
+        if (currentSection < inputSections.length - 1) {
+          inputSections[currentSection].classList.remove('active');
+          currentSection++;
+          inputSections[currentSection].classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

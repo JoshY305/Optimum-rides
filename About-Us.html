@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Optimum Rides offers premium taxi and rideshare services across Central Florida, including airport transfers, appointments, and reservations. Book your ride today!">
+  <title>About Us - Optimum Rides | Premium Taxi & Rideshare Service in Central Florida</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .btn-glow {
+      animation: glow 1.5s ease-in-out infinite alternate;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #4a90e2; /* Soft blue for consistency */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(45, 55, 72, 0.5);
+    }
+
+    .btn-glow:hover {
+      background-color: #2a66a0; /* Slightly darker blue on hover */
+      box-shadow: 0 0 20px rgba(45, 55, 72, 0.8);
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgba(45, 55, 72, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 0 20px rgba(45, 55, 72, 1);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
+      <a href="index.html" class="text-xl font-bold text-yellow-400">Optimum Rides</a>
+      <div class="space-x-6">
+        <a href="index.html" class="text-white hover:text-yellow-400">Home</a>
+        <a href="book-a-ride.html" class="hover:text-gray-400">Book a Ride</a>
+        <a href="about-us.html" class="hover:text-gray-400">About Us</a>
+        <a href="become-a-driver.html" class="hover:text-gray-400">Become a Driver</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Us Section -->
+  <section class="text-center py-16 bg-gray-800 text-white">
+    <h1 class="section-title">About Optimum Rides</h1>
+    <p class="text-lg mt-4 max-w-3xl mx-auto text-gray-300 leading-relaxed">Optimum Rides is your premium, reliable taxi and rideshare service provider in Central Florida. We offer high-quality rides for all types of travelers, from locals to tourists, and ensure you get the best possible service at affordable fare options. Whether you’re looking for a quick ride across town or an airport transfer, we’ve got you covered!</p>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="container mx-auto py-16">
+    <h2 class="section-title text-center text-white">Our Services</h2>
+    <div class="grid-container mt-8">
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Taxi & Rideshare Services</h3>
+        <p>Optimum Rides provides premium taxi and rideshare services across Central Florida, ensuring comfort, convenience, and reliability. Whether you're heading to a business meeting or enjoying a day out, our drivers are here to make your journey smooth and hassle-free.</p>
+      </div>
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Airport Transfers</h3>
+        <p>We offer fast and dependable airport transfers to and from major airports in Central Florida, including Orlando International Airport (MCO), Tampa International Airport (TPA), and more. Book your ride ahead of time for a stress-free experience when traveling to or from the airport.</p>
+      </div>
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Appointments & Reservations</h3>
+        <p>Need a ride for a medical appointment, business meeting, or special event? Optimum Rides is here to provide you with dependable transportation options. We specialize in appointments and reservations to ensure you arrive on time and in comfort, every time.</p>
+      </div>
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Local Attractions</h3>
+        <p>Explore all that Central Florida has to offer with Optimum Rides! We provide comfortable rides to popular attractions such as Walt Disney World, Universal Studios, SeaWorld, ICON Park, the Kennedy Space Center, and more. Let us take you on an unforgettable journey through the heart of Florida!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="bg-gray-200 py-16">
+    <h2 class="section-title text-center text-gray-800">Why Choose Optimum Rides?</h2>
+    <p class="text-center mt-4 max-w-3xl mx-auto text-gray-800">At Optimum Rides, we pride ourselves on offering more than just a ride—we offer a premium transportation experience. Our fleet of well-maintained vehicles, friendly drivers, and commitment to customer satisfaction make us the top choice for rideshare services in Central Florida.</p>
+    <div class="flex justify-center mt-8">
+      <button class="btn-glow" id="bookNowBtn">Book Your Ride Now</button>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container mx-auto py-16">
+    <h2 class="section-title text-center text-gray-800">Frequently Asked Questions</h2>
+    <div class="grid-container mt-8">
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Do you offer airport transfers?</h3>
+        <p>Yes! We offer reliable airport transfers to major airports across Central Florida, including Orlando International Airport (MCO) and Tampa International Airport (TPA). Book your ride in advance for a seamless airport experience.</p>
+      </div>
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Can I make a reservation in advance?</h3>
+        <p>Absolutely! You can book your ride in advance for any appointment, airport transfer, or reservation. Simply visit our booking page to schedule your ride today!</p>
+      </div>
+      <div class="grid-item">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">What types of services do you offer?</h3>
+        <p>We provide a variety of services including taxi and rideshare transportation, airport transfers, rides for appointments, business trips, local attractions, and special events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="text-center py-8">
+    <h2 class="section-title text-gray-800">Get in Touch with Us</h2>
+    <p class="mt-4">For any questions or to make a reservation, feel free to contact us. Our friendly customer support team is here to assist you!</p>
+    <button class="btn-glow mt-4" id="contactUsBtn">Contact Us</button>
+  </section>
+
+  <script>
+    document.getElementById("bookNowBtn").addEventListener("click", function () {
+      window.location.href = "book-a-ride.html";
+    });
+
+    document.getElementById("contactUsBtn").addEventListener("click", function () {
+      window.location.href = "contact-us.html";
+    });
+  </script>
+</body>
+
+</html>

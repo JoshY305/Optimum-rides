@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimum Rides - Your Convenient Ride Solution</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .btn-glow {
+      animation: glow 1.5s ease-in-out infinite alternate;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #1d4ed8; /* Subtle blue */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(29, 78, 216, 0.5);
+    }
+
+    .btn-glow:hover {
+      background-color: #2563eb; /* Slightly darker blue */
+      box-shadow: 0 0 20px rgba(29, 78, 216, 0.8);
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgba(29, 78, 216, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 0 20px rgba(29, 78, 216, 1);
+      }
+    }
+
+    .hero-section {
+      background-color: #4b5563; /* Darker grey for a more subtle look */
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+    }
+
+    .benefit-section {
+      background-color: #e5e7eb; /* Soft gray background */
+      padding: 60px 0;
+    }
+
+    .benefit-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .benefit-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-section {
+      background-color: #f9fafb; /* Lighter gray */
+      padding: 60px 0;
+    }
+
+    .testimonial-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .testimonial-container blockquote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-container cite {
+      font-size: 1rem;
+      color: #374151;
+    }
+
+    .cta-section {
+      background-color: #1f2937; /* Dark gray */
+      text-align: center;
+      padding: 40px 0;
+      color: white;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-section .btn-glow {
+      background-color: #f59e0b; /* Goldish yellow for contrast */
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+    }
+
+    .cta-section .btn-glow:hover {
+      background-color: #d97706; /* Slightly darker gold */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
+      <a href="index.html" class="text-xl font-bold">Optimum Rides</a>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-gray-400">Home</a>
+        <a href="book-a-ride.html" class="hover:text-gray-400">Book a Ride</a>
+        <a href="about-us.html" class="hover:text-gray-400">About Us</a>
+        <a href="become-a-driver.html" class="hover:text-gray-400">Become a Driver</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Get Around with Optimum Rides</h1>
+    <p>Fast, reliable, and affordable rides just a click away</p>
+    <button class="btn-glow" id="bookRideBtn">Book Your Ride</button>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefit-section">
+    <h2 class="text-3xl font-semibold text-center mb-12">Why Choose Optimum Rides?</h2>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="benefit-item">
+        <h3 class="text-xl font-semibold">Convenient</h3>
+        <p>Book a ride with just a few taps, anytime, anywhere.</p>
+      </div>
+      <div class="benefit-item">
+        <h3 class="text-xl font-semibold">Affordable</h3>
+        <p>Competitive pricing with no hidden fees. Get value for your money.</p>
+      </div>
+      <div class="benefit-item">
+        <h3 class="text-xl font-semibold">Reliable</h3>
+        <p>Our drivers are always on time, ensuring you get to your destination safely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <h2 class="text-3xl font-semibold text-center mb-8">What Our Riders Are Saying</h2>
+    <div class="testimonial-container">
+      <blockquote>"Optimum Rides has been a game changer for me! Fast, affordable, and convenient!"</blockquote>
+      <cite>- Sarah M., Frequent Rider</cite>
+    </div>
+    <div class="testimonial-container">
+      <blockquote>"I always feel safe and secure with Optimum Rides. The drivers are fantastic!"</blockquote>
+      <cite>- David T., Regular Customer</cite>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <h2>Ready for Your Next Ride?</h2>
+    <button class="btn-glow" id="ctaBtn">Book a Ride Now</button>
+  </section>
+
+  <script>
+    document.getElementById("bookRideBtn").addEventListener("click", function () {
+      window.location.href = "book-a-ride.html";
+    });
+
+    document.getElementById("ctaBtn").addEventListener("click", function () {
+      window.location.href = "book-a-ride.html";
+    });
+  </script>
+</body>
+
+</html>

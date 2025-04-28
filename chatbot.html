@@ -1,0 +1,17 @@
+<div id="chatbot" class="chatbot">
+  <div id="chatbot-header" class="chatbot-header">
+    <span>Chat with us!</span>
+    <button id="chatbot-close" onclick="toggleChatbot()">X</button>
+  </div>
+  <div id="chatbox" class="chatbox">
+    <div class="message bot">
+      <p>Hello! How can I help you today?</p>
+    </div>
+  </div>
+  <input type="text" id="userInput" class="chat-input" placeholder="Ask me anything..." onkeypress="if(event.key === 'Enter') sendMessage()">
+  <button onclick="sendMessage()" class="chat-send">Send</button>
+</div>
+
+<div id="chatbot-icon" class="chatbot-icon" onclick="toggleChatbot()">
+  <span>💬</span>
+</div>
